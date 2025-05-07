@@ -22,6 +22,11 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
+	@GetMapping("/")
+	public String demo(){
+		return "hello docker running successfully";
+	}
+
 	
 	@PostMapping("/Product/addProduct")
 	public ResponseEntity<ResponseStructure<Product>> addProduct(@RequestBody Product product) {
